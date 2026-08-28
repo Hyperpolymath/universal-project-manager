@@ -348,7 +348,7 @@ run_shell_lint() {
     log_info "Running shell script linters..."
     cd "$PROJECT_ROOT"
 
-    # shellcheck
+    # ShellCheck linting
     if command -v shellcheck &>/dev/null; then
         local shell_files
         shell_files=$(find . -name "*.sh" -o -name "*.bash" 2>/dev/null | grep -v node_modules | grep -v vendor || true)
